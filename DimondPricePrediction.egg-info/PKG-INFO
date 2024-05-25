@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: DimondPricePrediction
+Version: 0.0.1
+Author: nikhil shinde
+Author-email: nikhilshinde615@gmail.com
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: numpy

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/E23245_Nikhil/ML-Ops/End-to-End-Diamond-Prediction/src/pipeline/mlruns/0/2759d568fafa44099176665b77e3d590/artifacts
+end_time: 1716642716118
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2759d568fafa44099176665b77e3d590
+run_name: rumbling-ape-528
+run_uuid: 2759d568fafa44099176665b77e3d590
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716642716054
+status: 4
+tags: []
+user_id: E23245_Nikhil

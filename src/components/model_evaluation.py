@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import sys
 import os
-from sklearn.metrics import mean_absolute_error,median_absolute_error
+from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score
 from urllib.parse import urlparse
 import mlflow
 import mlflow.sklearn
@@ -11,7 +11,7 @@ import pickle
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 from src.logger.log_setup import logging
 from src.exception.exception import CustomException
-from src.utils.utils import save_object
+from src.utils.utils import load_object
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -54,7 +54,7 @@ class ModelEvaluation:
 
                     mlflow.sklearn.log_model(model,"model",registered_model_name="ml_model")
                 else:
-                    mlflow.sklearn,log_model(model,"model")
+                    mlflow.sklearn.log_model(model,"model")
                                                                                                                                                                                                                                                                                                                                                                                                                                                             
         except Exception as e:
             raise CustomException(e,sys)

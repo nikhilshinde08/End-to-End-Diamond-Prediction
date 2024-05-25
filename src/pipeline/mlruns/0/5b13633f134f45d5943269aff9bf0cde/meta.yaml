@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/E23245_Nikhil/ML-Ops/End-to-End-Diamond-Prediction/src/pipeline/mlruns/0/5b13633f134f45d5943269aff9bf0cde/artifacts
+end_time: 1716642879938
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5b13633f134f45d5943269aff9bf0cde
+run_name: invincible-rat-770
+run_uuid: 5b13633f134f45d5943269aff9bf0cde
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716642874845
+status: 3
+tags: []
+user_id: E23245_Nikhil

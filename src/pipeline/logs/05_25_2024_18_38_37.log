@@ -1,0 +1,36 @@
+[2024-05-25 18:38:40,235] 25 root - INFO - Data Ingestion started
+[2024-05-25 18:38:41,717] 28 root - INFO - Reading the data frame
+[2024-05-25 18:38:42,598] 35 root - INFO - Saved the raw data in artifact folder
+[2024-05-25 18:38:42,631] 39 root - INFO - Train-test split completed
+[2024-05-25 18:38:43,522] 44 root - INFO - Saved train and test data in artifact folder
+[2024-05-25 18:38:43,526] 70 root - INFO - Attempting to read train data from artifacts\train.csv
+[2024-05-25 18:38:43,603] 72 root - INFO - Train data shape: (96786, 11)
+[2024-05-25 18:38:43,603] 74 root - INFO - Attempting to read test data from artifacts\test.csv
+[2024-05-25 18:38:43,681] 76 root - INFO - Test data shape: (96787, 11)
+[2024-05-25 18:38:43,681] 78 root - INFO - Read train and test data complete
+[2024-05-25 18:38:43,693] 79 root - INFO - Train Dataframe Head:
+       id  carat    cut color clarity  depth  table     x     y     z  price
+0  154509   0.38  Ideal     D     VS1   62.7   55.0  4.67  4.64  2.91    949
+1      74   0.41  Ideal     E     VS1   61.8   54.0  4.78  4.80  2.96    917
+2  142149   0.71  Ideal     E     SI2   61.6   56.0  5.73  5.79  3.54   2671
+3   57347   1.01   Good     F     SI2   63.7   58.0  6.32  6.26  4.01   3546
+4   42925   0.31  Ideal     F    VVS1   62.6   56.0  4.35  4.32  2.71    814
+[2024-05-25 18:38:43,707] 80 root - INFO - Test Dataframe Head:
+       id  carat        cut color clarity  depth  table     x     y     z  price
+0  158667   0.31      Ideal     F      IF   61.0   56.0  4.37  4.39  2.67    914
+1  139983   1.00       Good     E     SI1   64.3   56.0  6.27  6.22  4.00   4276
+2   53962   0.30      Ideal     J      IF   61.3   56.0  4.34  4.38  2.67    576
+3   71781   1.01  Very Good     D     SI2   62.9   59.0  6.36  6.41  4.01   4580
+4  158661   1.53      Ideal     H     VS2   62.3   55.0  7.41  7.38  4.61  12193
+[2024-05-25 18:38:43,707] 28 root - INFO - Data Transformation initiated
+[2024-05-25 18:38:43,707] 39 root - INFO - Pipeline Initiated
+[2024-05-25 18:38:43,951] 97 root - INFO - Applying preprocessing object on training and testing datasets.
+[2024-05-25 18:38:43,961] 107 root - INFO - Preprocessing pickle file saved
+[2024-05-25 18:38:43,964] 21 root - INFO - Initialized ModelTrainer
+[2024-05-25 18:38:43,964] 25 root - INFO - Splitting Dependent and Independent variables from train and test data
+[2024-05-25 18:38:43,964] 33 root - INFO - Data split done
+[2024-05-25 18:38:43,965] 41 root - INFO - Starting model evaluation
+[2024-05-25 18:38:45,070] 43 root - INFO - Model Report: {'LinearRegression': 0.9358893224009359, 'Lasso': 0.9359090812219983, 'Ridge': 0.9358891309281574, 'ElasticNet': 0.8552703444946083}
+[2024-05-25 18:38:45,070] 53 root - INFO - Best Model Found: Model Name: Lasso, R2 Score: 0.9359090812219983
+[2024-05-25 18:38:45,071] 59 root - INFO - Model saved successfully
+[2024-05-25 18:38:45,071] 21 root - INFO - evaluation Started
