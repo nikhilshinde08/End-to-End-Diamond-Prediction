@@ -16,18 +16,42 @@ from pathlib import Path
 @dataclass
 class DataIngestionConfig:
     def __init__(self):
-        pass
+        raw_data_path:str=os.path.join("artifacts","raw.csv")
+        train_data_path:str=os.path.join("artifacts","train.csv")
+        test_data_path:str=os.path.join("artifacts","test.csv")
 
 
 
 
 class DataIngestion:
     def __init__(self):
-        pass
+        self.ingestion_config=DataIngestionConfig()
     
     def initiate_data_ingestion(self):
+        logging.info("Data Ingestion started")
         try:
-            pass
+            data=pd.read_csv(r"""https://raw.githubusercontent.com/sunnysavita10/fsdsmendtoend/main/notebooks/data/gemstone.csv""")
+            logging.info("reading a df")
+            os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
+            data.to_csv(self.ingestion_config.raw_data_path,index=False)
+            logging.info("I have saved the raw data in artifact folder")
+            logging.info("here I have performed train test split")
+
+            train_data,test_data=train_test_split(data,test_size=0.5)
+            logging.info("train test split completed")
+
+            return (
+
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
+            )
+
+
         except Exception as e:
-            logging.info()
+            logging.info("exception e occured")
             raise CustomException(e,sys)
+
+if __name__=="__main__":
+    obj=DataIngestion()
+
+    obj.initiate_data_ingestion()
